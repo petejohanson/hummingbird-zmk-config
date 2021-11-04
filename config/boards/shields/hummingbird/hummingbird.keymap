@@ -81,10 +81,16 @@
         };
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <6 8>;
+            key-positions = <3 4>;
             bindings = <&kp ESC>;
-            layers = <DEF_L UPP_L NAV_L>;
+            layers = <DEF_L>;
         };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp DEL>;
+            layers = <DEF_L>;
+        };        
         combo_select_all {
             timeout-ms = <50>;
             key-positions = <20 21>;
@@ -100,9 +106,9 @@
 
         default_layer {
             bindings = <
-    &kp W      &kp F      &kp M      &kp P      &kp G      &kp J      &kp U      &kp O      &kp Y      &kp K
+    &kp W      &kp F      &kp M      &kp P      &kp G      &kp J      &kp U      &kp O      &kp Y      &kp QUOT 
     &kp R      &kp S      &kp N      &kp T      &kp B      &kp Z      &kp A      &kp E      &kp I      &kp H
-               &kp C      &kp L      &kp D                            &kp QUOT   &kp COMMA  &kp DOT
+               &kp C      &kp L      &kp D                            &kp K      &kp COMMA  &kp DOT
                &mo NAV_L             &kp SPACE                        &sl UPP_L             &sl SYM_L
             >;
         };
@@ -119,9 +125,9 @@
 
         upper_layer {
             bindings = <
-    &kp LS(W)  &kp LS(F)  &kp LS(M)  &kp LS(P)  &kp LS(G)  &kp LS(J)  &kp LS(U)  &kp LS(O)  &kp LS(Y)  &kp LS(K)
+    &kp LS(W)  &kp LS(F)  &kp LS(M)  &kp LS(P)  &kp LS(G)  &kp LS(J)  &kp LS(U)  &kp LS(O)  &kp LS(Y)  &kp DQT
     &kp LS(R)  &kp LS(S)  &kp LS(N)  &kp LS(T)  &kp LS(B)  &kp LS(Z)  &kp LS(A)  &kp LS(E)  &kp LS(I)  &kp LS(H)
-               &kp LS(C)  &kp LS(L)  &kp LS(D)                        &kp DQT    &kp EXCL   &kp QMARK
+               &kp LS(C)  &kp LS(L)  &kp LS(D)                        &kp LS(K)  &kp EXCL   &kp QMARK
                &trans                &kp LS(SPACE)                    &trans                &sl NUM_L
             >;
         };
@@ -129,9 +135,9 @@
         sym_layer {
             label = "Sym";
             bindings = <
-    &kp PIPE2  &kp AT     &kp POUND  &kp DLLR   &kp PRCNT  &kp CARET  &kp GRAVE  &kp LT     &kp GT     &kp BSLH
-    &kp TILDE  &kp MINUS  &kp ASTRK  &kp EQUAL  &kp PLUS   &kp AMPS   &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI
-               &kp LBRC   &kp LBKT   &kp LPAR                         &kp RPAR   &kp RBKT   &kp RBRC
+    &kp PIPE2  &kp LBKT   &kp LPAR   &kp LBRC   &kp PLUS  &kp AMPS    &kp RBRC   &kp RPAR   &kp RBKT   &kp GRAVE
+    &kp TILDE  &kp MINUS  &kp ASTRK  &kp EQUAL  &kp PRCNT &kp CARET   &sk LCTRL  &sk LSHFT  &sk LALT   &sk LGUI
+               &kp AT     &kp POUND  &kp DLLR                         &kp BSLH   &kp LT     &kp GT
                &trans                &kp UNDER                        &sl NUM_L  &trans
             >;
         };
